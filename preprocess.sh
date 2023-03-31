@@ -1,3 +1,5 @@
+#add prefix to barcode
+
 samtools view -h S04_primary-atac.sam | awk -v OFS="\t" -v prefix="pri_" '
     BEGIN { FS = "\t" } 
     $1 ~ /^@/ { print $0 } 
