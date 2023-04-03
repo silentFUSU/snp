@@ -1,1 +1,1 @@
-samtools view -H $BAM | sed "s/SM:Oldname/SM:Newname/" | samtools reheader - $BAM
+java -jar ~/software/picard.jar AddOrReplaceReadGroups I=${i}.realn.bam O=${i}.bam RGID=${i} RGLB=${i} RGPL=illumina RGSM=${i} RGPU=unit1
